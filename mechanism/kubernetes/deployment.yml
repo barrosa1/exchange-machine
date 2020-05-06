@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mechanism-service
+spec:
+  selector:
+    app: mechanism
+  ports:
+  - protocol: "TCP"
+    port: 6000
+    targetPort: 5000
+  type: LoadBalancer
+
+
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mechanism
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: mechanism
+    spec:
+      containers:
+      - name: mechanism
+        image: mechanism:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
