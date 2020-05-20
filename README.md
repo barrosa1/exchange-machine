@@ -1,4 +1,4 @@
-# exchange-machine
+# Exchange-machine
 Information exchange mechanism between computer modules of a distributed system.
 
 ## Complex goals assume:
