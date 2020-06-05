@@ -1,13 +1,14 @@
 cd mechanism/app
 pip install -r requirements.txt
 python main.py
+cd ../
 docker build -f Dockerfile -t mechanism:latest .
 docker image ls
 docker run -p 5001:5000 mechanism
 kubectl config use-context docker-for-desktop
 kubectl get nodes
-kubectl apply -f deployment.yaml
+kubectl apply -f kubernetes\deployment.yaml
 kubectl get pods
-kubectl create -f rabbitmq-service.yaml
-kubectl create -f rabbitmq-controller.yaml
+kubectl create -f kubernetes\rabbitmq-service.yaml
+kubectl create -f kubernetes\rabbitmq-controller.yaml
 #
