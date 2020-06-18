@@ -1,1 +1,0 @@
-Information exchange mechanism between computer modules of a distributed system.

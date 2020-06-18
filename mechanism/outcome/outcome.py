@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 with open("output.txt", "r") as f, open("result.txt", "w") as out:
     for line in f:
         line = line.replace("\n","")

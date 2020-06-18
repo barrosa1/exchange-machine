@@ -14,7 +14,7 @@
         spec:
           containers:
           - image: rabbitmq
-            name: rabbitmq
+            name: rabbitrabbmq
             ports:
             - containerPort: 5672
             resources:
